@@ -1,0 +1,88 @@
+# File delle skills
+# Struttura base in coda al file
+---
+marco:
+  #  Scrivania
+  - name: Accensione luce scrivania
+    matching:
+      - tokens:
+          - accendere
+          - luce
+          - scrivania
+    actions:
+      - function: light_up
+        params:
+          - marco
+          - scrivania
+    speech: Ok, accendo la luce
+    note: Accende la luce della scrivania
+
+  - name: Spegnere luce scrivania
+    matching:
+      - tokens:
+          - spegnere
+          - luce
+          - scrivania
+    actions:
+      - function: light_off
+        params:
+          - scrivania
+    speech: ok, spengo la luce
+    note: Spegne la luce della scrivania
+
+  # Luce principale
+  - nome: Accensione luce della camera
+    matching:
+      - tokens:
+          - accendere
+          - luce
+          - camera
+      - tokens:
+          - accendere
+      - tokens:
+          - accendere
+          - luce
+    actions:
+      - function: light_up
+        params:
+    speech: Ok, accendo le luci
+    note: Accende la luce della camera
+
+  - nome: Spegnere luce della camera
+    matching:
+      - tokens:
+          - spegnere
+          - luce
+      - tokens:
+          - spegnere
+      - tokens:
+          - spegnere
+          - luce
+    actions:
+      - function: light_off
+        params:
+          - marco
+          - scrivania
+    speech: Ok, accendo le luci
+    note: Spegne la luce della camera
+
+# Tapparelle
+
+
+
+# File base
+# Copiare e decommentare per tilizzarlo
+#
+#  i campi con ~ richiedono del testo
+#
+#  - name:  ~
+#    matching:
+#      - tokens:
+#        -  ~         # almeno uno per rendere attiva l'azione
+#    actions:         # eliminare in caso non si vogliano funzioni
+#      - function: ~
+#        params:
+#          -  ~       # elimiare i '-' nel caso non ci siano parametri da passare alla funzione
+#    speech:  ~       # non necessario
+#    note:  ~         # non necessario
+
