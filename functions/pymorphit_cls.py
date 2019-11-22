@@ -335,9 +335,3 @@ class PyMorphITCLS(object):
 
         out.close()
         print('Lemmatized file saved as {}'.format(outfile))
-
-
-if __name__ == '__main__':
-    lemmatizer = PyMorphITCLS()
-    lemmatizer.DEBUG = True
-    lemmatizer.lemmatize_file(mode='Q')
